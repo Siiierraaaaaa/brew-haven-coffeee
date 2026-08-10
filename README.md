@@ -8,7 +8,7 @@ A responsive coffee shop website designed and developed as a fictional client pr
 
 ## GitHub Repository
 
-(Add URL)
+(<https://github.com/Siiierraaaaaa/brew-haven-coffeee/>)
 
 ---
 
