@@ -1,3 +1,8 @@
+html,body{
+    width: 100%;
+    max-width: 100%;
+    overflow-x:hidden;
+}
 
 /* Navigation */
 
@@ -48,128 +53,211 @@
 .order-online:hover {
     background: #995f2f;
 }
+
 /* Hero Section */
 
 .hero-img {
     width: 600px;
     height: 400px;
 }
-.hero{
 
-    display:flex;
+.hero {
 
-    justify-content:space-between;
+    display: flex;
 
-    align-items:center;
+    justify-content: space-between;
 
-    padding:80px;
+    align-items: center;
 
-    background:#F8F4EE;
+    padding: 80px;
 
-    gap:60px;
+    background: #F8F4EE;
 
-}
-
-.hero-text{
-
-    flex:1;
+    gap: 60px;
 
 }
 
-.hero-image{
+.hero-text {
 
-    flex:1;
-
-}
-
-.hero-img{
-
-    width:100%;
-
-    border-radius:20px;
+    flex: 1;
 
 }
 
-.hero-subtitle{
+.hero-image {
 
-    color:#995f2f;
-
-    font-weight:600;
-
-    letter-spacing:2px;
-
-    text-transform:uppercase;
+    flex: 1;
 
 }
 
-.hero h1{
+.hero-img {
 
-    font-size:56px;
+    width: 100%;
 
-    color:#622b14;
-
-    margin:20px 0;
+    border-radius: 20px;
 
 }
 
-.hero-description{
+.hero-subtitle {
 
-    font-size:18px;
+    color: #995f2f;
 
-    line-height:1.8;
+    font-weight: 600;
 
-    color:#555;
+    letter-spacing: 2px;
 
-    margin-bottom:35px;
-
-}
-
-.hero-buttons{
-
-    display:flex;
-
-    gap:20px;
+    text-transform: uppercase;
 
 }
 
-.primary-btn{
+.hero h1 {
 
-    background:#622b14;
+    font-size: 56px;
 
-    color:white;
+    color: #622b14;
 
-    text-decoration:none;
-
-    padding:15px 30px;
-
-    border-radius:50px;
+    margin: 20px 0;
 
 }
 
-.primary-btn:hover{
+.hero-description {
 
-    background:#995f2f;
+    font-size: 18px;
 
-}
+    line-height: 1.8;
 
-.secondary-btn{
+    color: #555;
 
-    border:2px solid #622b14;
-
-    color:#622b14;
-
-    text-decoration:none;
-
-    padding:15px 30px;
-
-    border-radius:50px;
+    margin-bottom: 35px;
 
 }
 
-.secondary-btn:hover{
+.hero-buttons {
 
-    background:#622b14;
+    display: flex;
 
-    color:white;
+    gap: 20px;
 
+}
+
+.primary-btn {
+
+    background: #622b14;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 15px 30px;
+
+    border-radius: 50px;
+
+}
+
+.primary-btn:hover {
+
+    background: #995f2f;
+
+}
+
+.secondary-btn {
+
+    border: 2px solid #622b14;
+
+    color: #622b14;
+
+    text-decoration: none;
+
+    padding: 15px 30px;
+
+    border-radius: 50px;
+
+}
+
+.secondary-btn:hover {
+
+    background: #622b14;
+
+    color: white;
+
+}
+
+.why-us {
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 0;
+    background: #f8f4ed;
+    margin-bottom: 25px;
+}
+
+.why-us-track {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    width: max-content;
+    animation: scroll 15s linear infinite;
+}
+
+.why-us-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.why-us-item img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.why-us-item span {
+    font-size: 14px;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(100vw);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+.featured-drink-item{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.featured-drinks{
+    text-align: center;
+    padding: 60px 8%;
+}
+.featured-drinks p{
+font-size: medium;
+color: #622b14;
+}
+.featured-drinks{
+    background: white;
+    width: 250px;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(84, 59, 55, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.drinks img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.drinks p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #543b37;
+    margin-top: 15px;
+}
+.drinks:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(84, 59, 55, 0.2);
 }
