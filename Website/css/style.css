@@ -1,7 +1,8 @@
-html,body{
+html,
+body {
     width: 100%;
     max-width: 100%;
-    overflow-x:hidden;
+    overflow-x: hidden;
 }
 
 /* Navigation */
@@ -224,40 +225,401 @@ html,body{
         transform: translateX(-100%);
     }
 }
-.featured-drink-item{
+
+.featured-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 60px 8%;
+    align-items: stretch;
+}
+
+.drinks {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 15px;
 }
-.featured-drinks{
-    text-align: center;
-    padding: 60px 8%;
+
+.drinks p {
+    font-size: medium;
+    color: #622b14;
 }
-.featured-drinks p{
-font-size: medium;
-color: #622b14;
-}
-.featured-drinks{
+
+.drink {
     background: white;
-    width: 250px;
-    padding: 15px;
+    flex: 1;
+    padding: 10px;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(84, 59, 55, 0.12);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.drinks img {
+
+.drink img {
     width: 100%;
     height: 220px;
     object-fit: cover;
     border-radius: 10px;
 }
-.drinks p {
+
+.drink p {
     font-size: 18px;
     font-weight: bold;
     color: #543b37;
     margin-top: 15px;
 }
-.drinks:hover {
+
+.drink:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 25px rgba(84, 59, 55, 0.2);
+}
+
+.featured-menu {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(84, 59, 55, 0.12);
+}
+
+.featured-menu img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 20px 0;
+}
+
+.testimonials {
+    text-align: center;
+    padding: 60px 8%;
+}
+
+.testimonials h2 {
+    color: #543b37;
+    margin-bottom: 30px;
+}
+
+#testimonial-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 30px;
+    width: 30%;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(84, 59, 55, 0.12);
+}
+
+.testimonial-card p {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #543b37;
+}
+
+.testimonial-card h3 {
+    margin-top: 20px;
+    color: #543b37;
+}
+
+.testimonial-card span {
+    color: #c47a45;
+    letter-spacing: 3px;
+}
+
+.call-to-action {
+    width: 85%;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 25px 30px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    background-color: #fff5ec;
+    border-radius: 4px;
+}
+
+
+.call-to-action>div {
+    padding: 1rem 2rem;
+    border-right: 1px solid #e6d8cc;
+}
+
+.call-to-action>div:last-child {
+    border-right: none;
+}
+
+.call-to-action>div>div:last-child {
+    flex: 1;
+}
+
+.call-to-action h3 {
+    margin: 0 0 0.4rem;
+}
+
+.call-to-action p {
+    margin: 0 0 0.4rem;
+}
+
+.call-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #7a3e2b;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+}
+
+.call-to-action>div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+}
+
+.call-to-action a,
+.call-to-action button {
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: #7a3e2b;
+    font-weight: 600;
+}
+
+.call-to-action a {
+    text-decoration: none;
+}
+
+.call-to-action a:hover {
+    text-decoration: underline;
+}
+
+.call-to-action button {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.call-to-action button:hover {
+    text-decoration: underline;
+}
+
+.our-story,
+.our-coffee-bio,
+.visit-us {
+    padding: 10px 30px;
+}
+
+.our-story,
+.our-coffee-bio {
+    border-right: 1px solid #e6d8cc;
+}
+
+.our-coffee {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 5px solid #622b14;
+    border-radius: 10px;
+    /* z-index: 10; */
+    z-index: 1000;
+    background-color: #e4d6a9;
+    width: 500px;
+    max-width: 75%;
+}
+
+.our-coffee.active {
+    transform: translate(-50%, -50%) scale(1)
+}
+
+.coffee-story-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #622b14;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.coffee-story-close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+
+}
+
+.coffee-story-body {
+    padding: 10px 15px;
+
+}
+
+#overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 200ms ease-in-out;
+    z-index: 999;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    background-color: #543B37;
+    color: #fff;
+    padding: 4rem 6% 1.5rem;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 3rem;
+
+    margin-top: 4rem;
+}
+
+
+/* ========================================
+   FOOTER LOGO / BRAND
+======================================== */
+
+.footer-logo img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.footer-logo p {
+    max-width: 280px;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+
+/* Social links */
+
+.footer-logo a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 1rem;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.footer-logo a:hover {
+    color: #DB9C85;
+}
+
+
+/* ========================================
+   FOOTER HEADINGS
+======================================== */
+
+footer h3 {
+    color: #FEEBED;
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+}
+
+
+/* ========================================
+   QUICK LINKS + MENU
+======================================== */
+
+.quick-links,
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.quick-links a,
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    width: fit-content;
+    transition: color 0.2s ease;
+}
+
+.quick-links a:hover,
+.menu a:hover {
+    color: #DB9C85;
+}
+
+
+/* ========================================
+   CONTACT
+======================================== */
+
+.contact-us {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-us a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contact-us a:hover {
+    color: #DB9C85;
+}
+
+.footer-address p {
+    margin-top: 0.25rem;
+    color: #fff;
+}
+
+
+/* ========================================
+   FOOTER CREDIT
+======================================== */
+
+.footer-credit {
+    grid-column: 1 / -1;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+
+    text-align: center;
+
+    font-size: 0.85rem;
+}
+
+.footer-credit p {
+    margin: 0.3rem 0;
+}
+
+.footer-credit a {
+    color: #FEEBED;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-credit a:hover {
+    color: #DB9C85;
 }

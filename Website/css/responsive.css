@@ -1,0 +1,19 @@
+@media (max-width: 768px) {
+    .call-to-action {
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .our-story,
+    .our-coffee-bio,
+    .visit-us {
+        padding: 20px;
+        border-right: none;
+        border-bottom: 1px solid #e6d8cc;
+    }
+
+    .visit-us {
+        border-bottom: none;
+    }
+}
